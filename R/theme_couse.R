@@ -31,8 +31,6 @@ theme_couse <- function(base_size = 12,
 
   ret <- ggplot2::theme_minimal(base_family = "IBM Plex Sans",
                                 base_size = base_size,
-                                plot.caption.position = "plot",
-                                panel.spacing = ggplot2::unit(2, "lines"),
                                 ...)
 
   ret$strip.text <- ggtext::element_markdown(size = strip_text_size,
@@ -54,7 +52,8 @@ theme_couse <- function(base_size = 12,
 
   ret$axis.title.x <- ggtext::element_markdown(margin = ggplot2::margin(t = axis_x_margin))
 
-  ret$axis.title.y <- ggtext::element_markdown(margin = ggplot2::margin(r = axis_y_margin))
+  ret$axis.title.y <- ggtext::element_markdown(margin = ggplot2::margin(r = axis_y_margin),
+                                               angle = 90)
 
   ret$plot.caption <- ggtext::element_markdown(margin = ggplot2::margin(t = 17, b = 5),
                                                family = "IBM Plex Sans"
@@ -67,6 +66,17 @@ theme_couse <- function(base_size = 12,
   ggplot2::update_geom_defaults('text',
                                 list(family = "IBM Plex Sans")
                                 )
+
+  ggplot2::update_geom_defaults('col', list(fill = "maroon4", alpha = 0.8))
+
+  ggplot2::update_geom_defaults('bar', list(fill = "maroon4", alpha = 0.8))
+
+  ggplot2::update_geom_defaults('rect', list(color = "maroon4", alpha = 0.8))
+
+  ggplot2::theme(plot.caption.position = "plot",
+                 panel.spacing = ggplot2::unit(2, "lines")
+                 )
+
 
   ret
 
