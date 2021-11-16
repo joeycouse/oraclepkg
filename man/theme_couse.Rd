@@ -14,6 +14,7 @@ theme_couse(
   plot_title_margin = 10,
   axis_x_margin = 10,
   axis_y_margin = 5,
+  fill = "maroon4",
   ...
 )
 }
@@ -36,6 +37,8 @@ theme_couse(
 
 \item{axis_y_margin}{right margin for y axis title}
 
+\item{fill}{default fill color for geom_bar, geom_rect, and geom_col}
+
 \item{...}{other args to \code{theme_minimal}}
 }
 \value{
@@ -45,6 +48,13 @@ A ggplot2 theme
 Set pretty defaults for ggplot2 objects
 }
 \examples{
+
+\dontrun{
+
+library(tidyverse)
+
+theme_set(theme_couse())
+}
 
 
 }

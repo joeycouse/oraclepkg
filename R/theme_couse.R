@@ -9,6 +9,7 @@
 #' @param plot_title_margin bottom margin for plot title
 #' @param axis_x_margin top margin for x axis title
 #' @param axis_y_margin right margin for y axis title
+#' @param fill default fill color for geom_bar, geom_rect, and geom_col
 #' @param ... other args to \code{theme_minimal}
 #'
 #'
@@ -16,6 +17,13 @@
 #' @export
 #'
 #' @examples
+#'
+#' \dontrun{
+#'
+#' library(tidyverse)
+#'
+#' theme_set(theme_couse())
+#' }
 #'
 #'
 theme_couse <- function(base_size = 12,
@@ -27,6 +35,7 @@ theme_couse <- function(base_size = 12,
                         plot_title_margin = 10,
                         axis_x_margin = 10,
                         axis_y_margin = 5,
+                        fill = "maroon4",
                         ...){
 
   ret <- ggplot2::theme_minimal(base_family = "IBM Plex Sans",
@@ -67,11 +76,11 @@ theme_couse <- function(base_size = 12,
                                 list(family = "IBM Plex Sans")
                                 )
 
-  ggplot2::update_geom_defaults('col', list(fill = "maroon4", alpha = 0.8))
+  ggplot2::update_geom_defaults('col', list(fill = fill, alpha = 0.8))
 
-  ggplot2::update_geom_defaults('bar', list(fill = "maroon4", alpha = 0.8))
+  ggplot2::update_geom_defaults('bar', list(fill = fill, alpha = 0.8))
 
-  ggplot2::update_geom_defaults('rect', list(color = "maroon4", alpha = 0.8))
+  ggplot2::update_geom_defaults('rect', list(color = fill, alpha = 0.8))
 
   ggplot2::theme(plot.caption.position = "plot",
                  panel.spacing = ggplot2::unit(2, "lines")
