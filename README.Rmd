@@ -22,6 +22,19 @@ The goal of cousepkg is to make plots pretty using a custom theme and `ggtext::e
 
 ## Installation
 
+`cousepkg` requires the install of the [IBM Plex Sans](https://github.com/IBM/plex/). If you are having problems installing the fonts see a solution [here](https://github.com/wch/extrafont/issues/32#issuecomment-907556721). 
+
+Run code below to install system fonts
+
+```{r eval=FALSE, include=FALSE}
+install.packages(extrafont)
+library(extrafont)
+
+extrafont::font_import()
+
+```
+
+
 install development version from [GitHub](https://github.com/) with:
 
 ``` r
@@ -40,6 +53,12 @@ theme_set(theme_couse())
 
 mtcars %>%
   ggplot(aes(x = cyl))+
-  geom_bar()
+  geom_bar()+
+  labs(x = 'Cylinders',
+       y = 'Count',
+       title = 'Total Cars by Cylinders',
+       subtitle = '*Eight cylinder vehicles are most common*',
+       caption = '**There are many cars!**')
+
 
 ```
