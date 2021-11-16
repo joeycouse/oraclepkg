@@ -26,7 +26,7 @@ The goal of cousepkg is to make plots pretty using a custom theme and `ggtext::e
 
 Run code below to install system fonts
 
-```{r eval=FALSE, include=FALSE}
+```{r eval=FALSE, include=TRUE}
 install.packages(extrafont)
 library(extrafont)
 

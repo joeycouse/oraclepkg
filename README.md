@@ -18,6 +18,13 @@ installing the fonts see a solution
 
 Run code below to install system fonts
 
+``` r
+install.packages(extrafont)
+library(extrafont)
+
+extrafont::font_import()
+```
+
 install development version from [GitHub](https://github.com/) with:
 
 ``` r
