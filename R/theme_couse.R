@@ -87,6 +87,19 @@ theme_couse <- function(base_size = 12,
                  panel.spacing = ggplot2::unit(2, "lines")
                  )
 
+  options(
+    ggplot2.discrete.fill = list(
+      c("skyblue", "orange"),
+      RColorBrewer::brewer.pal(3, "Accent"),
+      RColorBrewer::brewer.pal(8, "Set2")
+    ),
+    ggplot2.discrete.colour = list(
+      c("skyblue", "orange"),
+      RColorBrewer::brewer.pal(3, "Accent"),
+      RColorBrewer::brewer.pal(8, "Set2")
+    )
+  )
+
 
   ret
 
