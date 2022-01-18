@@ -67,7 +67,8 @@ theme_couse <- function(base_size = 12,
   ret$plot.caption <- ggtext::element_markdown(margin = ggplot2::margin(t = 17, b = 5),
                                                hjust = 1,
                                                family = "IBM Plex Sans",
-                                               size = 10
+                                               size = 10,
+                                               lineheight = 1.5
                                                )
 
   ggplot2::update_geom_defaults('label',
