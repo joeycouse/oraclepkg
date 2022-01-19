@@ -50,7 +50,8 @@ theme_couse <- function(base_size = 12,
 
   ret$plot.subtitle <-  ggtext::element_markdown(hjust = 0, size = subtitle_size,
                                                  margin = ggplot2::margin(b = subtitle_margin),
-                                                 family = "IBM Plex Sans Light"
+                                                 family = "IBM Plex Sans Light",
+                                                 lineheight = 1.2
                                                  )
 
   ret$plot.title <- ggtext::element_markdown(hjust = 0,
@@ -70,6 +71,8 @@ theme_couse <- function(base_size = 12,
                                                size = 10,
                                                lineheight = 1.5
                                                )
+
+  ret$legend.spacing.y = ggplot2::unit(0, 'mm')
 
   ggplot2::update_geom_defaults('label',
                                 list(family = "IBM Plex Sans")
