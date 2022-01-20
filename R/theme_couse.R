@@ -44,7 +44,7 @@ theme_couse <- function(base_size = 12,
 
   ret$strip.text <- ggtext::element_markdown(size = strip_text_size,
                                              family =  "IBM Plex Sans Medium",
-                                             margin = ggplot2::margin(b = strip_text_margin),
+                                             margin = ggplot2::margin(b = strip_text_margin, t = strip_text_margin),
                                              hjust = 0
                                              )
 
@@ -73,6 +73,8 @@ theme_couse <- function(base_size = 12,
                                                )
 
   ret$legend.spacing.y = ggplot2::unit(0, 'mm')
+
+  ret$legend.background = ggplot2::element_rect(fill = 'white', color = 'black')
 
   ggplot2::update_geom_defaults('label',
                                 list(family = "IBM Plex Sans")
