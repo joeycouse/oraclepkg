@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of cousepkg is to make plots pretty using a custom theme and `ggtext::element_markdown()` objects
+The goal of cousepkg is to make plots pretty using a custom theme and `ggtext::element_markdown()` objects and provide my own RMarkdown template. 
 
 ## Installation
 
@@ -46,9 +46,8 @@ devtools::install_github("joeycouse/cousepkg")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(cousepkg)
-library(extrafont)
 library(tidyverse)
+library(cousepkg)
 theme_set(theme_couse())
 
 mtcars %>%
@@ -62,3 +61,9 @@ mtcars %>%
 
 
 ```
+
+
+## Source
+
+Package largely inspired by data visualizations from [@juliasilge](https://github.com/juliasilge) and her personal R Package [silgelib](https://github.com/juliasilge/silgelib)
+
