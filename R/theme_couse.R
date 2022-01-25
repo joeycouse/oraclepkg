@@ -62,8 +62,12 @@ theme_couse <- function(base_size = 12,
 
   ret$axis.title.x <- ggtext::element_markdown(margin = ggplot2::margin(t = axis_x_margin))
 
+  ret$axis.text.x <- ggtext::element_markdown(family= "IBM Plex Sans")
+
   ret$axis.title.y <- ggtext::element_markdown(margin = ggplot2::margin(r = axis_y_margin),
                                                angle = 90)
+
+  ret$axis.text.y <- ggtext::element_markdown(family= "IBM Plex Sans")
 
   ret$plot.caption <- ggtext::element_markdown(margin = ggplot2::margin(t = 17, b = 5),
                                                hjust = 1,
