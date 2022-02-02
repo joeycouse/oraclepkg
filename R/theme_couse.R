@@ -35,22 +35,30 @@ theme_couse <- function(base_size = 12,
                         plot_title_margin = 10,
                         axis_x_margin = 10,
                         axis_y_margin = 5,
-                        fill = "maroon4",
+                        fill = "steelblue3",
                         ...){
 
   ret <- ggplot2::theme_minimal(base_family = "IBM Plex Sans",
                                 base_size = base_size,
                                 ...)
 
-  ret$strip.text <- ggtext::element_markdown(size = strip_text_size,
-                                             family =  "IBM Plex Sans Medium",
-                                             margin = ggplot2::margin(b = strip_text_margin, t = strip_text_margin),
-                                             hjust = 0
-                                             )
+  ret$strip.text <- ggtext::element_textbox_simple(family = "IBM Plex Sans",
+                                              size = strip_text_size,
+                                              halign = 0.5,
+                                              margin = ggplot2::margin(b = strip_text_margin, t = strip_text_margin),
+                                              padding = ggplot2::margin(5, 0, 5, 0),
+                                              color = "black",
+                                              fill = "grey88",
+                                              box.colour = "grey88",
+                                              linetype = 1,
+                                              r = unit(6, "pt")
+                                              )
+
+
 
   ret$plot.subtitle <-  ggtext::element_markdown(hjust = 0, size = subtitle_size,
                                                  margin = ggplot2::margin(b = subtitle_margin),
-                                                 family = "IBM Plex Sans Light",
+                                                 family = "IBM Plex Sans",
                                                  lineheight = 1.2
                                                  )
 
@@ -76,9 +84,9 @@ theme_couse <- function(base_size = 12,
                                                lineheight = 1.5
                                                )
 
-  ret$legend.spacing.y = ggplot2::unit(0, 'mm')
+  ret$legend.spacing.y = ggplot2::unit(1, 'mm')
 
-  ret$legend.background = ggplot2::element_rect(fill = 'white', color = 'black')
+  ret$legend.background = ggplot2::element_rect(fill = 'white', color = 'white')
 
   ggplot2::update_geom_defaults('label',
                                 list(family = "IBM Plex Sans")
