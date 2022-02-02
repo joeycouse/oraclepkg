@@ -25,8 +25,6 @@ The goal of cousepkg is to make plots pretty using a custom theme and `ggtext::e
 
 `cousepkg` requires the install of the [IBM Plex Sans](https://github.com/IBM/plex/). The package relies on [ragg](https://github.com/r-lib/ragg) for access to system fonts.
 
-Run code below to install system fonts
-
 install development version from [GitHub](https://github.com/) with:
 
 ``` r
