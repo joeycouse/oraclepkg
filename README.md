@@ -16,8 +16,6 @@ template.
 Sans](https://github.com/IBM/plex/). The package relies on
 [ragg](https://github.com/r-lib/ragg) for access to system fonts.
 
-Run code below to install system fonts
-
 install development version from [GitHub](https://github.com/) with:
 
 ``` r

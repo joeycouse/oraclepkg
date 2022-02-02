@@ -14,7 +14,7 @@ theme_couse(
   plot_title_margin = 10,
   axis_x_margin = 10,
   axis_y_margin = 5,
-  fill = "maroon4",
+  fill = "steelblue3",
   ...
 )
 }
