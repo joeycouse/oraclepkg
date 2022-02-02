@@ -13,18 +13,10 @@ template.
 ## Installation
 
 `cousepkg` requires the install of the [IBM Plex
-Sans](https://github.com/IBM/plex/). If you are having problems
-installing the fonts see a solution
-[here](https://github.com/wch/extrafont/issues/32#issuecomment-907556721).
+Sans](https://github.com/IBM/plex/). The package relies on
+[ragg](https://github.com/r-lib/ragg) for access to system fonts.
 
 Run code below to install system fonts
-
-``` r
-install.packages(extrafont)
-library(extrafont)
-
-extrafont::font_import()
-```
 
 install development version from [GitHub](https://github.com/) with:
 
@@ -58,48 +50,12 @@ mtcars %>%
        title = 'Total Cars by Cylinders',
        subtitle = '*Eight cylinder vehicles are most common*',
        caption = '**There are many cars!**')
-#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
-#> found in Windows font database
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family not found in Windows font database
-
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family not found in Windows font database
-
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family not found in Windows font database
-
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family not found in Windows font database
-
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family not found in Windows font database
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
 
 ## Source
 
-Package largely inspired by data visualizations from
-\[@juliasilge\](<https://github.com/juliasilge>) and her personal R
-Package [silgelib](https://github.com/juliasilge/silgelib)
+cousepkg is largely inspired by data visualizations from
+[juliasilge](https://github.com/juliasilge) and her personal R Package
+[silgelib](https://github.com/juliasilge/silgelib)
