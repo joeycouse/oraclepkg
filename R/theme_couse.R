@@ -68,6 +68,7 @@ theme_couse <- function(base_size = 12,
                                              family = "IBM Plex Sans SemiBold"
                                              )
 
+
   ret$axis.title.x <- ggtext::element_markdown(margin = ggplot2::margin(t = axis_x_margin))
 
   ret$axis.text.x <- ggtext::element_markdown(family= "IBM Plex Sans")
@@ -87,6 +88,8 @@ theme_couse <- function(base_size = 12,
   ret$legend.spacing.y = ggplot2::unit(1, 'mm')
 
   ret$legend.background = ggplot2::element_rect(fill = 'white', color = 'white')
+
+  ret$legend.text = ggtext::element_markdown(family = "IBM Plex Sans")
 
   ggplot2::update_geom_defaults('label',
                                 list(family = "IBM Plex Sans")
