@@ -33,14 +33,18 @@ theme_couse <- function(base_size = 12,
                         subtitle_margin = 10,
                         plot_title_size = 16,
                         plot_title_margin = 10,
+                        plot_caption_size = 10,
                         axis_x_margin = 10,
                         axis_y_margin = 5,
+                        legend_text_size = 10,
                         fill = "steelblue3",
                         ...){
 
   ret <- ggplot2::theme_minimal(base_family = "IBM Plex Sans",
                                 base_size = base_size,
                                 ...)
+
+  ret$text = ggtext::element_markdown(family = "IBM Plex Sans")
 
   ret$strip.text <- ggtext::element_textbox_simple(family = "IBM Plex Sans",
                                               size = strip_text_size,
@@ -53,7 +57,6 @@ theme_couse <- function(base_size = 12,
                                               linetype = 1,
                                               r = unit(6, "pt")
                                               )
-
 
 
   ret$plot.subtitle <-  ggtext::element_markdown(hjust = 0, size = subtitle_size,
@@ -71,25 +74,23 @@ theme_couse <- function(base_size = 12,
 
   ret$axis.title.x <- ggtext::element_markdown(margin = ggplot2::margin(t = axis_x_margin))
 
-  ret$axis.text.x <- ggtext::element_markdown(family= "IBM Plex Sans")
-
   ret$axis.title.y <- ggtext::element_markdown(margin = ggplot2::margin(r = axis_y_margin),
                                                angle = 90)
-
-  ret$axis.text.y <- ggtext::element_markdown(family= "IBM Plex Sans")
 
   ret$plot.caption <- ggtext::element_markdown(margin = ggplot2::margin(t = 17, b = 5),
                                                hjust = 1,
                                                family = "IBM Plex Sans",
-                                               size = 10,
+                                               size = plot_caption_size,
                                                lineheight = 1.5
                                                )
 
   ret$legend.spacing.y = ggplot2::unit(1, 'mm')
 
-  ret$legend.background = ggplot2::element_rect(fill = 'white', color = 'white')
+  ret$legend.background = ggplot2::element_rect(fill = 'transparent', color = 'black')
 
-  ret$legend.text = ggtext::element_markdown(family = "IBM Plex Sans")
+  ret$legend.text = ggtext::element_markdown(family = "IBM Plex Sans", size = legend_text_size)
+
+  ret$complete = TRUE
 
   ggplot2::update_geom_defaults('label',
                                 list(family = "IBM Plex Sans")
