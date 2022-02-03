@@ -90,8 +90,6 @@ theme_couse <- function(base_size = 12,
 
   ret$legend.text = ggtext::element_markdown(family = "IBM Plex Sans", size = legend_text_size)
 
-  ret$complete = TRUE
-
   ggplot2::update_geom_defaults('label',
                                 list(family = "IBM Plex Sans")
                                 )
