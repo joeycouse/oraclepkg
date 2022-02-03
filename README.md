@@ -41,13 +41,18 @@ library(cousepkg)
 theme_set(theme_couse())
 
 mtcars %>%
-  ggplot(aes(x = cyl))+
-  geom_bar()+
+  ggplot(aes(x = as.factor(cyl)))+
+  geom_bar(aes(fill = as.factor(cyl)))+
   labs(x = 'Cylinders',
-       y = 'Count',
+       y = '**Count**',
        title = 'Total Cars by Cylinders',
        subtitle = '*Eight cylinder vehicles are most common*',
-       caption = '**There are many cars!**')
+       caption = 'There are many cars!',
+       fill = "*Cylinders*") +
+  theme(legend.position = c(0.15, 0.95),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.x = element_blank(),
+        legend.direction = "horizontal")
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
