@@ -65,7 +65,9 @@ theme_couse <- function(base_size = 12,
                                                lineheight = 1.5
   )
 
-  ret$axis.text <- ggtext::element_markdown(family = "IBM Plex Sans", size = axis_text_size)
+  ret$axis.text.x <- ggtext::element_markdown(family = "IBM Plex Sans", size = axis_text_size)
+
+  ret$axis.text.y <- ggtext::element_markdown(family = "IBM Plex Sans", size = axis_text_size)
 
   ret$axis.title.x <- ggtext::element_markdown(margin = ggplot2::margin(t = axis_x_margin))
 
