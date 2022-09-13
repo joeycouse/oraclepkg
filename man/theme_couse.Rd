@@ -12,8 +12,12 @@ theme_couse(
   subtitle_margin = 10,
   plot_title_size = 16,
   plot_title_margin = 10,
+  plot_caption_size = 10,
   axis_x_margin = 10,
   axis_y_margin = 5,
+  axis_text_size = 12,
+  legend_title_size = 12,
+  legend_text_size = 10,
   fill = "steelblue3",
   ...
 )

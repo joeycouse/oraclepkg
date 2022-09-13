@@ -126,7 +126,6 @@ theme_couse <- function(base_size = 12,
     )
   )
 
-
   ret
 
 }
