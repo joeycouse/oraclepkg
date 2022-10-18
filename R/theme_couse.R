@@ -21,6 +21,7 @@
 #' \dontrun{
 #'
 #' library(tidyverse)
+#' library(cousepkg)
 #'
 #' theme_set(theme_couse())
 #' }
@@ -115,17 +116,26 @@ theme_couse <- function(base_size = 12,
 
   options(
     ggplot2.discrete.fill = list(
-      c("skyblue", "orange"),
-      RColorBrewer::brewer.pal(3, "Accent"),
-      RColorBrewer::brewer.pal(8, "Set2")
+      thematic::okabe_ito()
     ),
     ggplot2.discrete.colour = list(
-      c("skyblue", "orange"),
-      RColorBrewer::brewer.pal(3, "Accent"),
-      RColorBrewer::brewer.pal(8, "Set2")
+      thematic::okabe_ito()
+    ),
+    ggplot2.continous.colour = list(
+      "viridis"
+    ),
+    ggplot2.continous.fill = list(
+      "viridis"
+    ),
+    ggplot2.binned.colour = list(
+      "viridis"
+    ),
+    ggplo2.binned.fill = list(
+      "viridis"
     )
   )
 
   ret
 
 }
+
