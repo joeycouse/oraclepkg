@@ -39,8 +39,7 @@ theme_couse <- function(base_size = 12,
                         axis_y_margin = 5,
                         axis_text_size = 12,
                         legend_title_size = 12,
-                        legend_text_size = 10,
-                        fill = "steelblue3",
+                        legend_text_size = 10
                         ...){
 
   ret <- ggplot2::theme_minimal(base_family = "IBM Plex Sans",
