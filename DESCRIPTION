@@ -12,5 +12,5 @@ RoxygenNote: 7.2.1
 Imports: 
     ggplot2,
     ggtext,
-    ragg,
-    thematic
+    thematic,
+    systemfonts

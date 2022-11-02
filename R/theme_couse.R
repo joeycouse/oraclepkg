@@ -7,8 +7,12 @@
 #' @param subtitle_margin bottom margin for subtitle
 #' @param plot_title_size plot title size
 #' @param plot_title_margin bottom margin for plot title
-#' @param axis_x_margin top margin for x axis title
+#' @param plot_caption_size font size of plot caption
+#' @param axis_x_margin top margin for x axis titl
+#' @param axis_text_size font size of axis text labels
 #' @param axis_y_margin right margin for y axis title
+#' @param legend_title_size font size of the legend title
+#' @param legend_text_size font of the legend text
 #' @param fill default fill color for geom_bar, geom_rect, and geom_col
 #' @param ... other args to \code{theme_minimal}
 #'
@@ -40,6 +44,7 @@ theme_couse <- function(base_size = 12,
                         axis_text_size = 12,
                         legend_title_size = 12,
                         legend_text_size = 10,
+                        fill = "#E69F00",
                         ...){
 
   ret <- ggplot2::theme_minimal(base_family = "IBM Plex Sans",
@@ -83,7 +88,7 @@ theme_couse <- function(base_size = 12,
                                                    fill = "grey88",
                                                    box.colour = "grey88",
                                                    linetype = 1,
-                                                   r = unit(6, "pt")
+                                                   r = ggplot2::unit(6, "pt")
   )
 
   ret$legend.title = ggtext::element_markdown(family = "IBM Plex Sans", size = legend_title_size)
@@ -106,8 +111,6 @@ theme_couse <- function(base_size = 12,
   ggplot2::update_geom_defaults('col', list(fill = fill, alpha = 0.8))
 
   ggplot2::update_geom_defaults('bar', list(fill = fill, alpha = 0.8))
-
-  ggplot2::update_geom_defaults('rect', list(color = fill, alpha = 0.8))
 
   ggplot2::theme(plot.caption.position = "plot",
                  panel.spacing = ggplot2::unit(2, "lines")

@@ -18,7 +18,7 @@ theme_couse(
   axis_text_size = 12,
   legend_title_size = 12,
   legend_text_size = 10,
-  fill = "steelblue3",
+  fill = "#E69F00",
   ...
 )
 }
@@ -37,9 +37,17 @@ theme_couse(
 
 \item{plot_title_margin}{bottom margin for plot title}
 
-\item{axis_x_margin}{top margin for x axis title}
+\item{plot_caption_size}{font size of plot caption}
+
+\item{axis_x_margin}{top margin for x axis titl}
 
 \item{axis_y_margin}{right margin for y axis title}
+
+\item{axis_text_size}{font size of axis text labels}
+
+\item{legend_title_size}{font size of the legend title}
+
+\item{legend_text_size}{font of the legend text}
 
 \item{fill}{default fill color for geom_bar, geom_rect, and geom_col}
 
@@ -56,6 +64,7 @@ Set pretty defaults for ggplot2 objects
 \dontrun{
 
 library(tidyverse)
+library(cousepkg)
 
 theme_set(theme_couse())
 }
