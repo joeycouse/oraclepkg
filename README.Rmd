@@ -19,11 +19,11 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of cousepkg is to make plots pretty using a custom theme and `ggtext::element_markdown()` objects and provide my own RMarkdown template. 
+Cousepkg is a custom ggplot2 theme and ultilizes `ggtext::element_markdown()`.
 
 ## Installation
 
-`cousepkg` requires the install of the [IBM Plex Sans](https://github.com/IBM/plex/). The package relies on [ragg](https://github.com/r-lib/ragg) for access to system fonts.
+`cousepkg` requires the install of the [IBM Plex Sans](https://github.com/IBM/plex/). The package relies on [systemfonts](https://systemfonts.r-lib.org/) for access to system fonts.
 
 install development version from [GitHub](https://github.com/) with:
 
@@ -36,7 +36,7 @@ devtools::install_github("joeycouse/cousepkg")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r example, fig.dpi=300, fig.height = 7}
 library(tidyverse)
 library(cousepkg)
 theme_set(theme_couse())
