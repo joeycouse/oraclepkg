@@ -19,7 +19,7 @@
                                 weight = c("normal", "semibold"),
                                 width = "normal")
 
-message("The default ggplot2 theme has been set to theme_couse()")
+packageStartupMessage("The default ggplot2 theme has been set to theme_couse()")
 ggplot2::theme_set(cousepkg::theme_couse())
 
 }
