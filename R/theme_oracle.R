@@ -25,9 +25,9 @@
 #' \dontrun{
 #'
 #' library(tidyverse)
-#' library(cousepkg)
+#' library(oraclepkg)
 #'
-#' theme_set(theme_couse())
+#' theme_set(theme_oracle())
 #' }
 #'
 #'
