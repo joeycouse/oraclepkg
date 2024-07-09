@@ -1,25 +1,25 @@
 .onAttach <- function(libname, pkgname) {
 
-  if("IBM Plex Sans" %in% systemfonts::system_fonts()$family == FALSE){
-    stop("You need to install the IBM Plex Sans font: https://github.com/IBM/plex/")
+  if("Oracle Sans" %in% systemfonts::system_fonts()$family == FALSE){
+    stop("You need to install the Oracle Sans Font")
   }
 
-  systemfonts::register_variant(name = "IBM Plex Light",
-                                family = "IBM Plex Sans",
+  systemfonts::register_variant(name = "Oracle Sans Light",
+                                family = "Oracle Sans",
                                 weight = "light",
                                 width = "normal")
 
-  systemfonts::register_variant(name = "IBM Plex Medium",
-                                family = "IBM Plex Sans",
+  systemfonts::register_variant(name = "Oracle Sans Medium",
+                                family = "Oracle Sans",
                                 weight = "medium",
                                 width = "normal")
 
-  systemfonts::register_variant(name = "IBM Plex",
-                                family = "IBM Plex Sans",
+  systemfonts::register_variant(name = "Oracle Sans",
+                                family = "Oracle Sans",
                                 weight = c("normal", "semibold"),
                                 width = "normal")
 
-packageStartupMessage("The default ggplot2 theme has been set to theme_couse()")
-ggplot2::theme_set(cousepkg::theme_couse())
+packageStartupMessage("The default ggplot2 theme has been set to theme_oracle()")
+ggplot2::theme_set(cousepkg::theme_oracle())
 
 }

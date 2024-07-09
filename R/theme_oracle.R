@@ -31,7 +31,7 @@
 #' }
 #'
 #'
-theme_couse <- function(base_size = 12,
+theme_oracle <- function(base_size = 12,
                         strip_text_size = 12,
                         strip_text_margin = 5,
                         subtitle_size = 13,
@@ -46,7 +46,7 @@ theme_couse <- function(base_size = 12,
                         legend_text_size = 11,
                         fill = "#E69F00",
                         ...) {
-  ret <- ggplot2::theme_minimal(base_family = "IBM Plex Sans",
+  ret <- ggplot2::theme_minimal(base_family = "Oracle Sans",
                                 base_size = base_size,
                                 ...)
 
@@ -54,7 +54,7 @@ theme_couse <- function(base_size = 12,
     hjust = 0,
     size = plot_title_size,
     margin = ggplot2::margin(b = plot_title_margin, l = plot_title_margin, t = plot_title_margin-2),
-    family = "IBM Plex",
+    family = "Oracle Sans",
     face = "bold"
   )
 
@@ -63,7 +63,7 @@ theme_couse <- function(base_size = 12,
       hjust = 0,
       size = subtitle_size,
       margin = ggplot2::margin(b = subtitle_margin, l = subtitle_margin),
-      family = "IBM Plex Sans",
+      family = "Oracle Sans",
       lineheight = 1.2
     )
 
@@ -71,31 +71,31 @@ theme_couse <- function(base_size = 12,
     ggtext::element_markdown(
       margin = ggplot2::margin(t = 17, b = 5),
       hjust = 1,
-      family = "IBM Plex Sans",
+      family = "Oracle Sans",
       size = plot_caption_size,
       lineheight = 1.5
     )
 
   ret$axis.text.x <-
-    ggtext::element_markdown(family = "IBM Plex Sans", size = axis_text_size)
+    ggtext::element_markdown(family = "Oracle Sans", size = axis_text_size)
 
   ret$axis.text.y <-
-    ggtext::element_markdown(family = "IBM Plex Sans", size = axis_text_size)
+    ggtext::element_markdown(family = "Oracle Sans", size = axis_text_size)
 
   ret$axis.title.x <-
     ggtext::element_markdown(margin = ggplot2::margin(t = axis_x_margin),
-                             family = "IBM Plex",
+                             family = "Oracle Sans",
                              face = "bold")
 
   ret$axis.title.y <-
     ggtext::element_markdown(margin = ggplot2::margin(r = axis_y_margin),
                              angle = 0,
-                             family = "IBM Plex",
+                             family = "Oracle Sans",
                              face = "bold")
 
   ret$strip.text <-
     ggtext::element_textbox_simple(
-      family = "IBM Plex Sans",
+      family = "Oracle Sans",
       size = strip_text_size,
       halign = 0.5,
       margin = ggplot2::margin(b = strip_text_margin, t = strip_text_margin),
@@ -113,15 +113,15 @@ theme_couse <- function(base_size = 12,
 
   ret$plot.title.position = "plot"
 
-  ret$legend.title = ggtext::element_markdown(family = "IBM Plex Sans", size = legend_title_size)
+  ret$legend.title = ggtext::element_markdown(family = "Oracle Sans", size = legend_title_size)
 
-  ret$legend.text = ggplot2::element_text(family = "IBM Plex Sans", size = legend_text_size)
+  ret$legend.text = ggplot2::element_text(family = "Oracle Sans", size = legend_text_size)
 
   ggplot2::update_geom_defaults('label',
-                                list(family = "IBM Plex Sans"))
+                                list(family = "Oracle Sans"))
 
   ggplot2::update_geom_defaults('text',
-                                list(family = "IBM Plex Sans"))
+                                list(family = "Oracle Sans"))
 
   ggplot2::update_geom_defaults('col', list(fill = fill, alpha = 0.8))
 
